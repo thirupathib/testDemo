@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function checkLoginForm(form) {
+            
+           var usn = document.getElementById("theFieldID");
+           var pwd = document.getElementById("password");
+    
+            if (usn.value == "") {
+                alert("Username or Email is needed");
+                usn.focus();
+                return false;
+            }
+            if (usn.value.length < 4) {
+                alert("Username or Email is to short");
+                usn.focus();
+                return false;
+            }
+            re = /^[-_a-zA-Z0-9.,@#!?]*$/;
+            if (!re.test(usn.value)) {
+                alert("Username or Email only contains letters, numbers and _-.,@#!?");
+                usn.focus();
+                return false;
+            }
+
+            if (usn.value.indexOf("@", 0) < 0) {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (usn.value.indexOf(".", 0) < 0) {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (pwd.value == "") {
+                alert("Password is needed");
+                pwd.focus();
+                return false;
+            }
+            if(pwd.value.length<=10){
+               window.alert("plz enter atleast 10 characters")
+            }
+            console.log("after function")
+            return true;
+        }
+
+    </script>
+</head>
+
+<body>
+    <form method='POST' name='signIn' onsubmit='return checkLoginForm(this);'>
+        <!-- <input type='hidden' name='action' value='signIn'> -->
+        <div class='enterInfo' align='left'> <label for="theFieldID">Username or Email :</label>  <br>
+        
+            <input size='30' type='text' name='username'  class='input' id='theFieldID'>
+        </div><br>
+        <div class='enterInfo' align='left'>Password: <br> <input id='password' size='30' type='password' name='pswd' class='input'></div>
+        <div class='agreement' align='left'>&nbsp;</div>
+        <input type='submit' value='Log In'>
+        
+    </form>
+</body>
+
+</html> 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<link rel="stylesheet" href="form.css">
+    
+<body>
+    <form>
+        <h2>Registration Form</h2><hr>
+        <br><br>
+        <div class="frm">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" required placeholder="enter ur fname"><br><br>
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" required placeholder="enter ur lname"><br><br>
+        <label for="mobile">Mobile Number:</label>
+        <input type="text"  id="mobile" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" required placeholder="enter your mobile number"><br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="gender" name="gender" required  value="Male"> <label for="gender">Male</label> &nbsp;
+        <input type="radio" id="gender1" name="gender" required  value="FeMale"><label for="gender1">FeMale</label><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required placeholder="enter ur email"><br><br>
+        <label for="addrs">Address:</label><br><br>
+       <textarea name="" id="addrs" placeholder="your Adress" cols="30" rows="5"></textarea><br><br>
+        <label for="pincode">Zipcode:</label>
+        <input type="text" id="pincode" pattern="[0-9.]*" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="6" required><br><br>
+        <label for="contry">Country:</label>
+         <select id="contry">
+              <option>----select----</option>
+              <option value="ctr1">India</option>
+              <option value="ctr2">USA</option>
+              <option value="ctr3">CHINA</option>
+              <option value="ctr4">ENGLAND</option>
+              <option value="ctr5">INDONESIA</option>
+              <option value="ctr6">KOREA</option>
+              <option value="ctr7">SOUTHAFRICA</option>
+              <option value="ctr8">MALAYSIA</option>
+              <option value="ctr9">DUBAI</option>
+              <option value="ctr10">ABUDHABI</option>
+              <option value="ctr11">DUBAI</option>
+              <option value="ctr12">SINGAPOOR</option>
+              <option value="ctr13">HANKONG</option>
+              
+
+         </select>
+
+<br><br>
+        <label for="txt1">Comment:</label><br>
+        <textarea name="txt" id="txt1" cols="30" rows="10" placeholder="----comment here----" required></textarea><br><br>
+        <input type="submit" style="padding:5px;background-color: blue;color: white;" value="Submit"> &nbsp;&nbsp;
+        <input type="reset" style="padding:5px; background-color:blue;color: white; " value="Cancel"><br><br>
+
+        <!-- <li class="link"><a href="formValidation.html">formValidation</a></li>
+        <li class="link11"><a href="images.html">Images</a></li> -->
+        </div>
+    </form>
+</body>
+</html>
